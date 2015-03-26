@@ -1,10 +1,4 @@
-# A Virtual Machine for Ruby on Rails Core Development
-
-## Introduction
-
-**Please note this VM is not designed for Rails application development, only Rails core development.**
-
-This project automates the setup of a development environment for working on Ruby on Rails itself. Use this virtual machine to work on a pull request with everything ready to hack and run the test suites.
+# A Virtual Machine for Ruby on Rails Development
 
 ## Requirements
 
@@ -57,33 +51,13 @@ Port 3000 in the host computer is forwarded to port 3000 in the virtual machine.
 
 * An ExecJS runtime
 
-## Recommended Workflow
+* Rails
 
-The recommended workflow is
+* Oh-my-zsh with (.zshrc config)[https://github.com/rastkojokic/dotfiles/blob/master/zshrc]
 
-* edit in the host computer and
+* Vim config from (vimfile)[https://github.com/rastkojokic/vimfiles]
 
-* test within the virtual machine.
-
-Just clone your Rails fork into the rails-dev-box directory on the host computer:
-
-    host $ ls
-    bootstrap.sh MIT-LICENSE README.md Vagrantfile
-    host $ git clone git@github.com:<your username>/rails.git
-
-Vagrant mounts that directory as _/vagrant_ within the virtual machine:
-
-    vagrant@rails-dev-box:~$ ls /vagrant
-    bootstrap.sh MIT-LICENSE rails README.md Vagrantfile
-
-Install gem dependencies in there:
-
-    vagrant@rails-dev-box:~$ cd /vagrant/rails
-    vagrant@rails-dev-box:/vagrant/rails$ bundle
-
-We are ready to go to edit in the host, and test in the virtual machine.
-
-This workflow is convenient because in the host computer you normally have your editor of choice fine-tuned, Git configured, and SSH keys in place.
+* (.gitconfig)[https://github.com/rastkojokic/dotfiles/blob/master/gitconfig]
 
 ## Virtual Machine Management
 
@@ -114,12 +88,6 @@ Finally, to completely wipe the virtual machine from the disk **destroying all i
     host $ vagrant destroy # DANGER: all is gone
 
 Please check the [Vagrant documentation](http://docs.vagrantup.com/v2/) for more information on Vagrant.
-
-## Faster Rails test suites
-
-The default mechanism for sharing folders is convenient and works out the box in
-all Vagrant versions, but there are a couple of alternatives that are more
-performant.
 
 ### rsync
 
