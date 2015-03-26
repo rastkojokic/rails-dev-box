@@ -63,7 +63,6 @@ wget https://raw.githubusercontent.com/rastkojokic/dotfiles/master/gitconfig -O 
 
 #update vim
 git clone https://github.com/strika/vimfiles ~/.vim
-cd ~/.vim && rake
 
 # Needed for docs generation.
 update-locale LANG=en_US.UTF-8 LANGUAGE=en_US.UTF-8 LC_ALL=en_US.UTF-8
