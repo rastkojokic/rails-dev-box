@@ -56,7 +56,7 @@ sudo apt-get install -y zsh
 sudo apt-get install -y git-core
 sudo wget https://github.com/robbyrussell/oh-my-zsh/raw/master/tools/install.sh -O - | zsh
 sudo sh -s `which zsh`
-wget https://raw.githubusercontent.com/rastkojokic/dotfiles/master/zshrc -O .zshrc
+sudo wget https://raw.githubusercontent.com/rastkojokic/dotfiles/master/zshrc -O .zshrc
 
 #gitconfig fetch from dotfiles
 wget https://raw.githubusercontent.com/rastkojokic/dotfiles/master/gitconfig -O .gitconfig
