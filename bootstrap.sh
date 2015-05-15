@@ -50,6 +50,8 @@ sudo add-apt-repository ppa:chris-lea/node.js
 sudo apt-get update
 sudo apt-get install -y nodejs
 gem install rails -v 4.2.0 --no-ri --no-rdoc
+sudo wget https://raw.githubusercontent.com/rastkojokic/dotfiles/master/zshrc -O .zshrc
+chsh -s /bin/zsh
 
 # install zsh
 sudo apt-get install -y zsh
